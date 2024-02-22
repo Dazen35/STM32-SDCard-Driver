@@ -605,7 +605,7 @@ int32_t SPI_SD_Card_DeInit(void *Handle)
     retval = SD_SendCmd(TF_CMD0, 0, 0x95);
   }
 
-  return 0;
+  return retval;
 }
 
 

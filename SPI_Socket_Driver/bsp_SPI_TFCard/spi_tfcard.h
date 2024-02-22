@@ -85,20 +85,20 @@
 /* SD卡API */
 int32_t  SD_Release(void);
 int32_t  SD_Select(void);
-int32_t  SD_WaitReady(void);									// 等待SD卡准备
-int32_t  SD_GetResponse(uint8_t Response);		// 获取SD卡响应
-int32_t  SD_SendCmd(uint8_t cmd, uint32_t arg, uint8_t crc);		// CMD指令发送
+int32_t  SD_WaitReady(void);
+int32_t  SD_GetResponse(uint8_t Response);
+int32_t  SD_SendCmd(uint8_t cmd, uint32_t arg, uint8_t crc);
 int32_t  SD_RecvData(uint8_t *buff, uint32_t len);
 int32_t  SD_SendBlock(uint8_t *buff, uint8_t cmd);
 int32_t  SD_RecvData_DMA(uint8_t *buff, uint32_t len);
 int32_t  SD_SendBlock_DMA(uint8_t *buff, uint8_t cmd);
-int32_t  SD_GetCID(uint8_t *cid_data);        // 获取SD卡CID
-int32_t  SD_GetCSD(uint8_t *csd_data);        // 获取SD卡CSD
-uint32_t SD_GetSectorCount(void);   					// 获取SD卡扇区数
-uint32_t SD_GetSectorSize(void);              // 获取SD卡扇区大小
-uint32_t SD_GetCapacity(void);								// 获取SD卡容量
-int32_t  SD_Information_Printf(void);					// 打印SD卡的类型和容量信息
-int32_t  SD_Card_Init(void);									// SD卡初始化
+int32_t  SD_GetCID(uint8_t *cid_data);
+int32_t  SD_GetCSD(uint8_t *csd_data);
+uint32_t SD_GetSectorCount(void);
+uint32_t SD_GetSectorSize(void);
+uint32_t SD_GetCapacity(void);
+int32_t  SD_Information_Printf(void);
+int32_t  SD_Card_Init(void);
 
 
 extern BSP_SDCard_t SPI_SDCard;
